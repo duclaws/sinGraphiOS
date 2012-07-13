@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B95AB4115ADF403000438E6 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B95AB4015ADF403000438E6 /* circle.png */; };
+		9B95AB4915AFA374000438E6 /* SinGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B95AB4815AFA374000438E6 /* SinGraphView.m */; };
+		9B95AB4E15AFA8BE000438E6 /* JSPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B95AB4D15AFA8BE000438E6 /* JSPoint.m */; };
 		9BC5804715AD5CCF00D25362 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC5804615AD5CCF00D25362 /* UIKit.framework */; };
 		9BC5804915AD5CCF00D25362 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC5804815AD5CCF00D25362 /* Foundation.framework */; };
 		9BC5804B15AD5CCF00D25362 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC5804A15AD5CCF00D25362 /* CoreGraphics.framework */; };
@@ -15,9 +18,17 @@
 		9BC5805715AD5CCF00D25362 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC5805615AD5CCF00D25362 /* AppDelegate.m */; };
 		9BC5805A15AD5CCF00D25362 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC5805915AD5CCF00D25362 /* ViewController.m */; };
 		9BC5805D15AD5CCF00D25362 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BC5805B15AD5CCF00D25362 /* ViewController.xib */; };
+		9BC5806915AD5D7E00D25362 /* 0087076214197.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9BC5806815AD5D7E00D25362 /* 0087076214197.jpg */; };
+		9BC5806B15AD5F9E00D25362 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC5806A15AD5F9E00D25362 /* QuartzCore.framework */; };
+		9BC5806D15AD709500D25362 /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BC5806C15AD709500D25362 /* line.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B95AB4015ADF403000438E6 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
+		9B95AB4715AFA374000438E6 /* SinGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinGraphView.h; sourceTree = "<group>"; };
+		9B95AB4815AFA374000438E6 /* SinGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinGraphView.m; sourceTree = "<group>"; };
+		9B95AB4A15AFA764000438E6 /* JSPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPoint.h; sourceTree = "<group>"; };
+		9B95AB4D15AFA8BE000438E6 /* JSPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPoint.m; sourceTree = "<group>"; };
 		9BC5804215AD5CCF00D25362 /* mathProj2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mathProj2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC5804615AD5CCF00D25362 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9BC5804815AD5CCF00D25362 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -31,6 +42,9 @@
 		9BC5805815AD5CCF00D25362 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		9BC5805915AD5CCF00D25362 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9BC5805C15AD5CCF00D25362 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		9BC5806815AD5D7E00D25362 /* 0087076214197.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0087076214197.jpg; sourceTree = "<group>"; };
+		9BC5806A15AD5F9E00D25362 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9BC5806C15AD709500D25362 /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BC5806B15AD5F9E00D25362 /* QuartzCore.framework in Frameworks */,
 				9BC5804715AD5CCF00D25362 /* UIKit.framework in Frameworks */,
 				9BC5804915AD5CCF00D25362 /* Foundation.framework in Frameworks */,
 				9BC5804B15AD5CCF00D25362 /* CoreGraphics.framework in Frameworks */,
@@ -50,6 +65,10 @@
 		9BC5803715AD5CCF00D25362 = {
 			isa = PBXGroup;
 			children = (
+				9B95AB4015ADF403000438E6 /* circle.png */,
+				9BC5806C15AD709500D25362 /* line.png */,
+				9BC5806A15AD5F9E00D25362 /* QuartzCore.framework */,
+				9BC5806815AD5D7E00D25362 /* 0087076214197.jpg */,
 				9BC5804C15AD5CCF00D25362 /* mathProj2 */,
 				9BC5804515AD5CCF00D25362 /* Frameworks */,
 				9BC5804315AD5CCF00D25362 /* Products */,
@@ -82,7 +101,11 @@
 				9BC5805815AD5CCF00D25362 /* ViewController.h */,
 				9BC5805915AD5CCF00D25362 /* ViewController.m */,
 				9BC5805B15AD5CCF00D25362 /* ViewController.xib */,
+				9B95AB4715AFA374000438E6 /* SinGraphView.h */,
+				9B95AB4815AFA374000438E6 /* SinGraphView.m */,
 				9BC5804D15AD5CCF00D25362 /* Supporting Files */,
+				9B95AB4A15AFA764000438E6 /* JSPoint.h */,
+				9B95AB4D15AFA8BE000438E6 /* JSPoint.m */,
 			);
 			path = mathProj2;
 			sourceTree = "<group>";
@@ -151,6 +174,9 @@
 			files = (
 				9BC5805115AD5CCF00D25362 /* InfoPlist.strings in Resources */,
 				9BC5805D15AD5CCF00D25362 /* ViewController.xib in Resources */,
+				9BC5806915AD5D7E00D25362 /* 0087076214197.jpg in Resources */,
+				9BC5806D15AD709500D25362 /* line.png in Resources */,
+				9B95AB4115ADF403000438E6 /* circle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +190,8 @@
 				9BC5805315AD5CCF00D25362 /* main.m in Sources */,
 				9BC5805715AD5CCF00D25362 /* AppDelegate.m in Sources */,
 				9BC5805A15AD5CCF00D25362 /* ViewController.m in Sources */,
+				9B95AB4915AFA374000438E6 /* SinGraphView.m in Sources */,
+				9B95AB4E15AFA8BE000438E6 /* JSPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +303,7 @@
 				9BC5806215AD5CCF00D25362 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

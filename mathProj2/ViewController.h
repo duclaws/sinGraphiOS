@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+#import "SinGraphView.h"
+#import "JSPoint.h"
+
 @interface ViewController : UIViewController
+{
+    UIImageView  *testImage;
+    UIImageView *circle;
+    IBOutlet UIImageView *line;
+    IBOutlet UILabel *txtSin;
+    IBOutlet UILabel *txtX;
+    IBOutlet UILabel *txtCos;
+
+//CGPoint *touchPoint;
+}
 
 @end
