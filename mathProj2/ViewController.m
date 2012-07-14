@@ -12,7 +12,7 @@
 #define SPIN_CLOCK_WISE 1
 #define SPIN_COUNTERCLOCK_WISE -1
 
-#define LOOP_SPEED .3
+#define LOOP_SPEED .1
 
 
 #import "ViewController.h"
@@ -34,11 +34,12 @@
     
     // Before we start the timer, initialize the array (duh)
     ((SinGraphView *) self.view).points = [[NSMutableArray alloc] init];
-
     [NSTimer scheduledTimerWithTimeInterval:LOOP_SPEED target:self selector:@selector(loop) userInfo:nil repeats:YES];
 
+    
+    
     [super viewDidLoad];
-    [self spinLayer:line.layer duration:10 direction:SPIN_COUNTERCLOCK_WISE];
+    //[self spinLayer:line.layer duration:10 direction:SPIN_COUNTERCLOCK_WISE];
    
 
        
@@ -71,7 +72,6 @@ float i=.01;
     JSPoint *p = [[JSPoint alloc] init];
     i += .10;
     
-    
     y = 50 * sin(i)+150;
     x = 50 * cos(i)+150;
     
@@ -81,17 +81,12 @@ float i=.01;
     NSString *sinString =[[NSNumber numberWithFloat:y] stringValue];
     NSString *cosString =[[NSNumber numberWithFloat:x] stringValue];
     NSString *xString =[[NSNumber numberWithFloat:i] stringValue];
-
     [txtSin setText:sinString];
     [txtCos setText:cosString];
-    
     [txtX setText:xString];
-        
-    
-    
-    redLine.frame = CGRectMake (150, x, 300, 10);
 
-    
+    redLine.frame = CGRectMake (y, x, 300, 10);
+ 
     [((SinGraphView *) self.view).points addObject:p];
 }
 

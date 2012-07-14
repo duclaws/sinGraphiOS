@@ -11,6 +11,8 @@
 		9B95AB4915AFA374000438E6 /* SinGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B95AB4815AFA374000438E6 /* SinGraphView.m */; };
 		9B95AB4E15AFA8BE000438E6 /* JSPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B95AB4D15AFA8BE000438E6 /* JSPoint.m */; };
 		9BBA010215B0F33300F20871 /* redline.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BBA010115B0F33300F20871 /* redline.png */; };
+		9BBA010515B108B500F20871 /* sinBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BBA010415B108B500F20871 /* sinBack@2x.png */; };
+		9BBA010715B10A8E00F20871 /* sinBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BBA010615B10A8E00F20871 /* sinBack.png */; };
 		9BC5804715AD5CCF00D25362 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC5804615AD5CCF00D25362 /* UIKit.framework */; };
 		9BC5804915AD5CCF00D25362 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC5804815AD5CCF00D25362 /* Foundation.framework */; };
 		9BC5804B15AD5CCF00D25362 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC5804A15AD5CCF00D25362 /* CoreGraphics.framework */; };
@@ -31,6 +33,8 @@
 		9B95AB4A15AFA764000438E6 /* JSPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPoint.h; sourceTree = "<group>"; };
 		9B95AB4D15AFA8BE000438E6 /* JSPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPoint.m; sourceTree = "<group>"; };
 		9BBA010115B0F33300F20871 /* redline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redline.png; sourceTree = "<group>"; };
+		9BBA010415B108B500F20871 /* sinBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sinBack@2x.png"; sourceTree = "<group>"; };
+		9BBA010615B10A8E00F20871 /* sinBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sinBack.png; sourceTree = "<group>"; };
 		9BC5804215AD5CCF00D25362 /* mathProj2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mathProj2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC5804615AD5CCF00D25362 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9BC5804815AD5CCF00D25362 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -75,6 +79,8 @@
 				9BC5804C15AD5CCF00D25362 /* mathProj2 */,
 				9BC5804515AD5CCF00D25362 /* Frameworks */,
 				9BC5804315AD5CCF00D25362 /* Products */,
+				9BBA010415B108B500F20871 /* sinBack@2x.png */,
+				9BBA010615B10A8E00F20871 /* sinBack.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,6 +187,8 @@
 				9BC5806D15AD709500D25362 /* line.png in Resources */,
 				9B95AB4115ADF403000438E6 /* circle.png in Resources */,
 				9BBA010215B0F33300F20871 /* redline.png in Resources */,
+				9BBA010515B108B500F20871 /* sinBack@2x.png in Resources */,
+				9BBA010715B10A8E00F20871 /* sinBack.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
