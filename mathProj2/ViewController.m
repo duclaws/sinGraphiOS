@@ -2,8 +2,8 @@
 //  ViewController.m
 //  mathProj2
 //
-//  Created by rich on 7/11/12.
-//  Copyright (c) 2012 rich. All rights reserved.
+//  Created by Joshua Sharfi on 7/11/12.
+//  Copyright (c) 2012 Joshua Sharfi. All rights reserved.
 //320×480
 
 // Our conversion definition
@@ -12,7 +12,7 @@
 #define SPIN_CLOCK_WISE 1
 #define SPIN_COUNTERCLOCK_WISE -1
 
-#define LOOP_SPEED .5
+#define LOOP_SPEED .3
 
 
 #import "ViewController.h"
@@ -27,9 +27,10 @@
 - (void)viewDidLoad
 {
     
-    //line=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"line.png"]];
-    circle=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"circle.png"]];
-    [self.view addSubview:line];
+    redLine=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"redline.png"]];
+    //circle=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"circle.png"]];
+    //redLine.frame = CGRectMake (150, 150, 200, 20);
+    [self.view addSubview:redLine];
     
     // Before we start the timer, initialize the array (duh)
     ((SinGraphView *) self.view).points = [[NSMutableArray alloc] init];
@@ -37,8 +38,11 @@
     [NSTimer scheduledTimerWithTimeInterval:LOOP_SPEED target:self selector:@selector(loop) userInfo:nil repeats:YES];
 
     [super viewDidLoad];
-	    
-         [self spinLayer:line.layer duration:100 direction:SPIN_COUNTERCLOCK_WISE];
+    [self spinLayer:line.layer duration:10 direction:SPIN_COUNTERCLOCK_WISE];
+   
+
+       
+   
     
     
     
@@ -56,7 +60,7 @@
 
 float x;
 float y;
-float i;
+float i=.01;
 
 - (void)update
 {
@@ -65,7 +69,8 @@ float i;
     NSLog(@"i is :%f",i);
     
     JSPoint *p = [[JSPoint alloc] init];
-    i+= (i+.01);
+    i += .10;
+    
     
     y = 50 * sin(i)+150;
     x = 50 * cos(i)+150;
@@ -81,8 +86,10 @@ float i;
     [txtCos setText:cosString];
     
     [txtX setText:xString];
+        
     
     
+    redLine.frame = CGRectMake (150, x, 300, 10);
 
     
     [((SinGraphView *) self.view).points addObject:p];
