@@ -33,8 +33,6 @@
 		9BC5805715AD5CCF00D25362 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC5805615AD5CCF00D25362 /* AppDelegate.m */; };
 		9BC5805A15AD5CCF00D25362 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BC5805915AD5CCF00D25362 /* ViewController.m */; };
 		9BC5805D15AD5CCF00D25362 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BC5805B15AD5CCF00D25362 /* ViewController.xib */; };
-		9BF5485C15B3E036003531CE /* Grid.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5485A15B3E036003531CE /* Grid.png */; };
-		9BF5485D15B3E036003531CE /* Grid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5485B15B3E036003531CE /* Grid@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,8 +70,6 @@
 		9BC5805815AD5CCF00D25362 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		9BC5805915AD5CCF00D25362 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9BC5805C15AD5CCF00D25362 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
-		9BF5485A15B3E036003531CE /* Grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grid.png; sourceTree = "<group>"; };
-		9BF5485B15B3E036003531CE /* Grid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Grid@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +101,6 @@
 				9B9791C115B404820051E1AE /* Default@2x.png */,
 				9B9791B815B3FDDD0051E1AE /* iPhoneIcon_Big.png */,
 				9B9791B615B3FDB60051E1AE /* iPhoneIcon_Small.png */,
-				9BF5485A15B3E036003531CE /* Grid.png */,
-				9BF5485B15B3E036003531CE /* Grid@2x.png */,
 				9B9955F615B3919D009D57B1 /* sinBack.png */,
 				9B9955F715B3919D009D57B1 /* sinBack@2x.png */,
 				9BC5804C15AD5CCF00D25362 /* mathProj2 */,
@@ -167,9 +161,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9BC5804115AD5CCF00D25362 /* mathProj2 */ = {
+		9BC5804115AD5CCF00D25362 /* sinGraph */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9BC5806015AD5CCF00D25362 /* Build configuration list for PBXNativeTarget "mathProj2" */;
+			buildConfigurationList = 9BC5806015AD5CCF00D25362 /* Build configuration list for PBXNativeTarget "sinGraph" */;
 			buildPhases = (
 				9BC5803E15AD5CCF00D25362 /* Sources */,
 				9BC5803F15AD5CCF00D25362 /* Frameworks */,
@@ -179,7 +173,7 @@
 			);
 			dependencies = (
 			);
-			name = mathProj2;
+			name = sinGraph;
 			productName = mathProj2;
 			productReference = 9BC5804215AD5CCF00D25362 /* mathProj2.app */;
 			productType = "com.apple.product-type.application";
@@ -205,7 +199,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9BC5804115AD5CCF00D25362 /* mathProj2 */,
+				9BC5804115AD5CCF00D25362 /* sinGraph */,
 			);
 		};
 /* End PBXProject section */
@@ -219,8 +213,6 @@
 				9BC5805D15AD5CCF00D25362 /* ViewController.xib in Resources */,
 				9B9955F815B3919D009D57B1 /* sinBack.png in Resources */,
 				9B9955F915B3919D009D57B1 /* sinBack@2x.png in Resources */,
-				9BF5485C15B3E036003531CE /* Grid.png in Resources */,
-				9BF5485D15B3E036003531CE /* Grid@2x.png in Resources */,
 				9B9791B715B3FDB60051E1AE /* iPhoneIcon_Small.png in Resources */,
 				9B9791B915B3FDDD0051E1AE /* iPhoneIcon_Big.png in Resources */,
 				9B9791BE15B3FFBF0051E1AE /* infoViewController.xib in Resources */,
@@ -356,7 +348,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9BC5806015AD5CCF00D25362 /* Build configuration list for PBXNativeTarget "mathProj2" */ = {
+		9BC5806015AD5CCF00D25362 /* Build configuration list for PBXNativeTarget "sinGraph" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9BC5806115AD5CCF00D25362 /* Debug */,

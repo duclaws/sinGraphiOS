@@ -4,20 +4,11 @@
 //
 //  Created by Joshua Sharfi on 7/11/12.
 //  Copyright (c) 2012 Joshua Sharfi. All rights reserved.
-//320×480
-
-// Our conversion definition
-#define DEGREES_TO_RADIANS(angle) (angle / 180.0 * M_PI)
-
-#define SPIN_CLOCK_WISE 1
-#define SPIN_COUNTERCLOCK_WISE -1
 
 #define LOOP_SPEED .05
 
-
 #import "ViewController.h"
 #import "infoViewController.h"
-//#include <QuartzCore/QuartzCore.h>
 
 @interface ViewController ()
 @end
@@ -41,8 +32,7 @@
 
     
     [super viewDidLoad];
-    //[self spinLayer:line.layer duration:10 direction:SPIN_COUNTERCLOCK_WISE];
-
+ 
 }
 
 float x;
@@ -129,7 +119,7 @@ float i=0;
     }
     else
     i = (i-.09);
-    //NSLog(@"y: %f",p.y);
+
     
 }
 
@@ -182,15 +172,11 @@ bool pausedBool=NO;
 }
 
 
-
-
-
 - (void)infoDismissed
 {
     shouldLoop = true;
     NSLog(@"Info dismissed");
 }
-
 
 
 
@@ -201,11 +187,6 @@ bool pausedBool=NO;
     CGPoint touchPoint = [touch locationInView:graph];
 
 }
-
-
-
-
-
 
 
 

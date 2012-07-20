@@ -58,8 +58,9 @@ int z=159;
             
                 //blue line
                 if (!(x>298)){
-                CGContextSetRGBFillColor(context, 0.0, 0.0, 1.0, 1.0f);
-                CGContextFillRect(context, CGRectMake(lastPoint.x, lastPoint.y, x-lastPoint.x, 1));
+                    CGContextSetRGBFillColor(context, 0.0, 0.0, 1.0, 1.0f);
+                    CGContextFillRect(context, CGRectMake(lastPoint.x, lastPoint.y, x-lastPoint.x, 1));
+                   
                     ///////teal on sin graph
                     CGContextSetLineWidth       (context, 2);
                     CGContextSetRGBStrokeColor  (context, 0.0, 0.3, 0.3, 1);

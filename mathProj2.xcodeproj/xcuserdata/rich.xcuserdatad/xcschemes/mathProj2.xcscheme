@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9BC5804115AD5CCF00D25362"
                BuildableName = "mathProj2.app"
-               BlueprintName = "mathProj2"
+               BlueprintName = "sinGraph"
                ReferencedContainer = "container:mathProj2.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,7 +34,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9BC5804115AD5CCF00D25362"
             BuildableName = "mathProj2.app"
-            BlueprintName = "mathProj2"
+            BlueprintName = "sinGraph"
             ReferencedContainer = "container:mathProj2.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -47,14 +47,13 @@
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
-      enableOpenGLFrameCaptureMode = "0"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9BC5804115AD5CCF00D25362"
             BuildableName = "mathProj2.app"
-            BlueprintName = "mathProj2"
+            BlueprintName = "sinGraph"
             ReferencedContainer = "container:mathProj2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -72,7 +71,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9BC5804115AD5CCF00D25362"
             BuildableName = "mathProj2.app"
-            BlueprintName = "mathProj2"
+            BlueprintName = "sinGraph"
             ReferencedContainer = "container:mathProj2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
