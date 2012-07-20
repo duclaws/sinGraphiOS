@@ -10,12 +10,9 @@
 
 #import "JSPoint.h"
 
+
 @interface SinGraphView : UIView
-{
-    IBOutlet UIImageView *redLine;
 
-
-}
 @property (nonatomic, retain) NSMutableArray *points;
 
 @end

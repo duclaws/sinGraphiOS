@@ -12,172 +12,199 @@
 #define SPIN_CLOCK_WISE 1
 #define SPIN_COUNTERCLOCK_WISE -1
 
-#define LOOP_SPEED .1
+#define LOOP_SPEED .05
 
 
 #import "ViewController.h"
-#include <QuartzCore/QuartzCore.h>
+#import "infoViewController.h"
+//#include <QuartzCore/QuartzCore.h>
 
 @interface ViewController ()
-
 @end
 
 @implementation ViewController
 
+@synthesize shouldLoop;
+
+
 - (void)viewDidLoad
 {
+      
+
     
-    redLine=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"redline.png"]];
-    //circle=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"circle.png"]];
-    //redLine.frame = CGRectMake (150, 150, 200, 20);
-    [self.view addSubview:redLine];
+    [self.view addSubview:line];
     
     // Before we start the timer, initialize the array (duh)
-    ((SinGraphView *) self.view).points = [[NSMutableArray alloc] init];
+    graph.points = [[NSMutableArray alloc] init];
+
     [NSTimer scheduledTimerWithTimeInterval:LOOP_SPEED target:self selector:@selector(loop) userInfo:nil repeats:YES];
 
     
-    
     [super viewDidLoad];
     //[self spinLayer:line.layer duration:10 direction:SPIN_COUNTERCLOCK_WISE];
-   
-
-       
-   
-    
-    
-    
-    
-    
-//    UIButton *infoButton;
-//    infoButton.frame=CGRectMake(10,12,30,40);
-//    [self.view addSubview:infoButton];
-//    
-//    [self spinLayer:infoButton.layer duration:3 direction:SPIN_COUNTERCLOCK_WISE];
-//
-
 
 }
 
 float x;
 float y;
-float i=.01;
+float i=0;
 
-- (void)update
+- (void)viewWillAppear:(BOOL)animated
 {
-    NSLog(@"X is :%f",x);
-    NSLog(@"Y is :%f",y);
-    NSLog(@"i is :%f",i);
-    
-    JSPoint *p = [[JSPoint alloc] init];
-    i += .10;
-    
-    y = 50 * sin(i)+150;
-    x = 50 * cos(i)+150;
-    
-    p.x = y;
-    p.y = x;
-    
-    NSString *sinString =[[NSNumber numberWithFloat:y] stringValue];
-    NSString *cosString =[[NSNumber numberWithFloat:x] stringValue];
-    NSString *xString =[[NSNumber numberWithFloat:i] stringValue];
-    [txtSin setText:sinString];
-    [txtCos setText:cosString];
-    [txtX setText:xString];
+    shouldLoop = true;
+}
 
-    redLine.frame = CGRectMake (y, x, 300, 10);
- 
-    [((SinGraphView *) self.view).points addObject:p];
+- (void)viewWillDisappear:(BOOL)animated
+{
+    shouldLoop = false;
+}
+
+
+- (IBAction)infoBtn:(id)sender {
+    infoViewController *infoView = [[infoViewController alloc] init];
+    [infoView setModalPresentationStyle:UIModalTransitionStyleFlipHorizontal];
+    [self presentModalViewController:infoView animated:YES];
+}
+
+-(IBAction) segmentedControlIndexChanged{
+   
+    switch (segControl.selectedSegmentIndex){
+    
+        case 0:
+        {
+            NSLog(@"deg touched");
+            lbl180big.text= @"180º";
+            lbl180small.text= @"180º";
+            lbl360big.text= @"360º";
+            lbl360small.text= @"360º";
+            break;
+
+        }
+            
+        case 1:
+        {
+            NSLog(@"rad touched");
+            lbl180big.text= @"π";
+            lbl180small.text= @"π";
+            lbl360big.text= @"2π";
+            lbl360small.text= @"2π";
+            
+            break;
+        
+        }
+    }
 }
 
 
 
+- (void)update
+{
 
+    JSPoint *p = [[JSPoint alloc] init];
+       
+    x = 50 * cos(i)+78;
+    y = 50 * sin(i)+150;
+    
+    p.x = x;
+    p.y = y;
+    
+    NSString *sinString =[[NSNumber numberWithFloat:y] stringValue];
+    NSString *cosString =[[NSNumber numberWithFloat:x] stringValue];
+    NSString *xString =[[NSNumber numberWithFloat:-i] stringValue];
 
+    [txtSin setText:sinString];
+    [txtCos setText:cosString];
+    
+    [txtX setText:xString];
+    
+    
+    [graph.points addObject:p];
+    
+    
+    //if x> 2PI, set x back to zero. this will loop only as long as it takes to reach 2PI. Otherwise increment x by value of .09
+    
+    if (i<=((-2*M_PI)))
+    {
+    i=0.0;
+    }
+    else
+    i = (i-.09);
+    //NSLog(@"y: %f",p.y);
+    
+}
 
+- (void)loopNoMatterWhat
+{
+    BOOL originalShouldLoop = shouldLoop;
+    shouldLoop = true;
+    
+    [self loop];
+    
+    shouldLoop = originalShouldLoop;
+}
 
+bool pausedBool=NO;
+- (IBAction)pause:(id)sender
+{
+    shouldLoop = !shouldLoop;
+        
+    if (pausedBool)
+    {
+        UIImage * pauseBtn = [UIImage imageNamed:@"pause.png"];
+        [playPauseBtn setImage:pauseBtn forState:UIControlStateNormal];
+        
+    }
+    else
+    {
+        UIImage * playBtn = [UIImage imageNamed:@"play.png"];
+        [playPauseBtn setImage:playBtn forState:UIControlStateNormal];
+        
+    }
+    pausedBool = !pausedBool;
+   
+}
 
-
+- (IBAction)next:(id)sender
+{
+    [self loopNoMatterWhat];
+}
 
 
 
 - (void)loop
 {
+    if (!shouldLoop)
+        return;
+    
     [self update];
     
-    [self.view setNeedsDisplayInRect:self.view.frame];
+    [graph setNeedsDisplayInRect:self.view.frame];
 }
 
 
 
 
 
-
+- (void)infoDismissed
+{
+    shouldLoop = true;
+    NSLog(@"Info dismissed");
+}
 
 
 
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    
-   
-    
+
     UITouch *touch = [touches anyObject];
-    CGPoint touchPoint = [touch locationInView:testImage];
-    
-   //testImage.frame = CGRectMake (50, 100, 300, 20);
-    
-        NSLog(@"X Position: %f",touchPoint.x);
+    CGPoint touchPoint = [touch locationInView:graph];
 
-    //[self setNeedsDisplayInRect:self];
-    
 }
 
 
 
 
-
-
-- (void)rotateImage:(UIImageView *)image duration:(NSTimeInterval)duration
-              curve:(int)curve degrees:(CGFloat)degrees
-{
-    // Setup the animation
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:duration];
-    [UIView setAnimationCurve:curve];
-    [UIView setAnimationBeginsFromCurrentState:YES];
-    
-    // The transform matrix
-    CGAffineTransform transform =
-    CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(degrees));
-    image.transform = transform;
-    
-    // Commit the changes
-    [UIView commitAnimations];
-}
-
-- (void)spinLayer:(CALayer *)inLayer duration:(CFTimeInterval)inDuration
-        direction:(int)direction
-{
-    CABasicAnimation* rotationAnimation;
-    
-    // Rotate about the z axis
-    rotationAnimation =
-    [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-    
-    // Rotate 360 degress, in direction specified
-    rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * 4.0 * direction];
-    
-    // Perform the rotation over this many seconds
-    rotationAnimation.duration = inDuration;
-    
-    // Set the pacing of the animation
-    rotationAnimation.timingFunction =
-    [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    
-    // Add animation to the layer and make it so
-    [inLayer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
-}
 
 
 
@@ -190,8 +217,16 @@ float i=.01;
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    
-    return YES;
+    return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
+- (void)viewDidUnload {
+    segControl = nil;
+    lbl180big = nil;
+    lbl360big = nil;
+    lbl360small = nil;
+    lbl180small = nil;
+    playPauseBtn = nil;
+    [super viewDidUnload];
+}
 @end
