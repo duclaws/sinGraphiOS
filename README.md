@@ -1,1 +1,1 @@
-![Alt text](https://github.com/duclaws/sinGraphiOS/blob/master/0087076214197.jpg "Optional title")
+![Alt text](https://github.com/duclaws/sinGraphiOS/blob/master/Default@2x.png "Optional title")
