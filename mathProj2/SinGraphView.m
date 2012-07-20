@@ -27,7 +27,7 @@ int z=159;
         lastPoint = point;
         
         
-        //sin(x) drawn
+        //sin(x) graph drawn
         if (!(x>298))
         {
             CGContextSetRGBFillColor(context, 0.0, 1.0, 0.0, 1.0f);
@@ -39,7 +39,7 @@ int z=159;
        
         if (lastPoint != nil)
         {
-            //angle line for circle
+            //black (clock hand) line for circle
             CGContextSetLineWidth       (context, 2);
             CGContextSetRGBStrokeColor  (context, 0.0, 0.0, 0.0, 1);
             CGContextMoveToPoint        (context, lastPoint.x, lastPoint.y);
@@ -56,7 +56,7 @@ int z=159;
             CGContextFillPath           (context);
 
             
-                //blue line
+                //blue line connecting sin graph and circle
                 if (!(x>298)){
                     CGContextSetRGBFillColor(context, 0.0, 0.0, 1.0, 1.0f);
                     CGContextFillRect(context, CGRectMake(lastPoint.x, lastPoint.y, x-lastPoint.x, 1));

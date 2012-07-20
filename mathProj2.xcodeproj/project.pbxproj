@@ -57,7 +57,7 @@
 		9B9791CB15B40E930051E1AE /* vbpng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vbpng.png; sourceTree = "<group>"; };
 		9B9955F615B3919D009D57B1 /* sinBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sinBack.png; sourceTree = "<group>"; };
 		9B9955F715B3919D009D57B1 /* sinBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sinBack@2x.png"; sourceTree = "<group>"; };
-		9BC5804215AD5CCF00D25362 /* mathProj2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mathProj2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BC5804215AD5CCF00D25362 /* mathProj2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = mathProj2.app; path = sinGraph.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC5804615AD5CCF00D25362 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9BC5804815AD5CCF00D25362 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9BC5804A15AD5CCF00D25362 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -86,11 +86,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9BC5803715AD5CCF00D25362 = {
+		9B8D20F815B9196400D3EB07 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				4E916E8915B49BC4000944C1 /* skip_forward.png */,
 				4E916E8715B49BB4000944C1 /* skip_forward@2x.png */,
+				4E916E8915B49BC4000944C1 /* skip_forward.png */,
 				4E916E8515B49716000944C1 /* pause@2x.png */,
 				4E916E8315B49710000944C1 /* pause.png */,
 				4E916E8115B495E6000944C1 /* play.png */,
@@ -103,6 +103,14 @@
 				9B9791B615B3FDB60051E1AE /* iPhoneIcon_Small.png */,
 				9B9955F615B3919D009D57B1 /* sinBack.png */,
 				9B9955F715B3919D009D57B1 /* sinBack@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		9BC5803715AD5CCF00D25362 = {
+			isa = PBXGroup;
+			children = (
+				9B8D20F815B9196400D3EB07 /* images */,
 				9BC5804C15AD5CCF00D25362 /* mathProj2 */,
 				9BC5804515AD5CCF00D25362 /* Frameworks */,
 				9BC5804315AD5CCF00D25362 /* Products */,
@@ -140,9 +148,9 @@
 				9BC5805915AD5CCF00D25362 /* ViewController.m */,
 				9B95AB4715AFA374000438E6 /* SinGraphView.h */,
 				9B95AB4815AFA374000438E6 /* SinGraphView.m */,
-				9BC5804D15AD5CCF00D25362 /* Supporting Files */,
 				9B95AB4A15AFA764000438E6 /* JSPoint.h */,
 				9B95AB4D15AFA8BE000438E6 /* JSPoint.m */,
+				9BC5804D15AD5CCF00D25362 /* Supporting Files */,
 			);
 			path = mathProj2;
 			sourceTree = "<group>";
