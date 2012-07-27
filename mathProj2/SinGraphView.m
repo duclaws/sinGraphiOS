@@ -64,14 +64,14 @@ int z=159;
                     ///////teal on sin graph
                     CGContextSetLineWidth       (context, 2);
                     CGContextSetRGBStrokeColor  (context, 0.0, 0.3, 0.3, 1);
-                    CGContextMoveToPoint        (context, x, lastPoint.y);
+                    CGContextMoveToPoint        (context, x, lastPoint.y); //following perimeter
                     CGContextAddLineToPoint(context,x,150); //set center axis
                     CGContextStrokePath(context);
                     CGContextFillPath           (context);
 
         }
             else
-            if (!(z>298))
+            if (!(z>298)) //this is looping the sin graph animation of the blue and teal lines
         {
             CGContextSetRGBFillColor(context, 0.0, 0.0, 1.0, 1.0f);
             CGContextFillRect(context, CGRectMake(lastPoint.x, lastPoint.y, z-lastPoint.x, 1));

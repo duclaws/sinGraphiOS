@@ -57,7 +57,7 @@
 		9B9791CB15B40E930051E1AE /* vbpng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vbpng.png; sourceTree = "<group>"; };
 		9B9955F615B3919D009D57B1 /* sinBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sinBack.png; sourceTree = "<group>"; };
 		9B9955F715B3919D009D57B1 /* sinBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sinBack@2x.png"; sourceTree = "<group>"; };
-		9BC5804215AD5CCF00D25362 /* mathProj2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = mathProj2.app; path = sinGraph.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BC5804215AD5CCF00D25362 /* sinGraph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sinGraph.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC5804615AD5CCF00D25362 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9BC5804815AD5CCF00D25362 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9BC5804A15AD5CCF00D25362 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -120,7 +120,7 @@
 		9BC5804315AD5CCF00D25362 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9BC5804215AD5CCF00D25362 /* mathProj2.app */,
+				9BC5804215AD5CCF00D25362 /* sinGraph.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,7 +183,7 @@
 			);
 			name = sinGraph;
 			productName = mathProj2;
-			productReference = 9BC5804215AD5CCF00D25362 /* mathProj2.app */;
+			productReference = 9BC5804215AD5CCF00D25362 /* sinGraph.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

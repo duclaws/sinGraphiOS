@@ -30,7 +30,6 @@
 
     [NSTimer scheduledTimerWithTimeInterval:LOOP_SPEED target:self selector:@selector(loop) userInfo:nil repeats:YES];
 
-    
     [super viewDidLoad];
  
 }
@@ -46,7 +45,9 @@ float i=0;
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    shouldLoop = false;
+    UIImage * pauseBtn = [UIImage imageNamed:@"pause.png"];
+    [playPauseBtn setImage:pauseBtn forState:UIControlStateNormal];
+       shouldLoop = false;
 }
 
 
